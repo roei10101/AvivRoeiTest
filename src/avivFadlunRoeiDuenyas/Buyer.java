@@ -1,18 +1,18 @@
+package avivFadlunRoeiDuenyas;
+
 import java.util.Date;
 
-public class Buyer {
-    private String username;
-    private String password;
+public class Buyer extends Person{
     private String address;
     private Product[] cart;
     private int cartCount;
     private Order[] orderHistory;
     private int orderCount;
 
+
     // Constructor
-    public Buyer(String username, String password,String address) {
-        this.username = username;
-        this.password = password;
+    public Buyer(String username, String password, String address) {
+        super(username,password);
         this.address = address;
         this.cart = new Product[2]; // initial capacity
         this.cartCount = 0;
@@ -27,21 +27,21 @@ public class Buyer {
 
 
 
-    public Product[] getCart() {
-        Product[] currentCart = new Product[cartCount];
-        for (int i = 0; i < cartCount; i++) {
-            currentCart[i] = cart[i];
-        }
-        return currentCart;
-    }
-
-    public Order[] getOrderHistory() {
-        Order[] currentOrderHistory = new Order[orderCount];
-        for (int i = 0; i < orderCount; i++) {
-            currentOrderHistory[i] = orderHistory[i];
-        }
-        return currentOrderHistory;
-    }
+//    public Product[] getCart() {
+//        Product[] currentCart = new Product[cartCount];
+//        for (int i = 0; i < cartCount; i++) {
+//            currentCart[i] = cart[i];
+//        }
+//        return currentCart;
+//    }
+//
+//    public Order[] getOrderHistory() {
+//        Order[] currentOrderHistory = new Order[orderCount];
+//        for (int i = 0; i < orderCount; i++) {
+//            currentOrderHistory[i] = orderHistory[i];
+//        }
+//        return currentOrderHistory;
+//    }
 
     // Add product to cart
     public void addToCart(Product product) {

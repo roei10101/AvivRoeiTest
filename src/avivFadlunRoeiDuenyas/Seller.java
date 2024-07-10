@@ -1,22 +1,22 @@
-public class Seller {
-    private String username;
-    private String password;
+package avivFadlunRoeiDuenyas;
+
+public class Seller extends Person {
     private Product[] products;
     private int productCount;
 
+
     // Constructor
     public Seller(String username, String password) {
-        this.username = username;
-        this.password = password;
+        super(username,password);
         this.products = new Product[2]; // initial capacity
         this.productCount = 0;
+
     }
 
     // Getters
     public String getUsername() {
         return username;
     }
-
 
 
     public Product[] getProducts() {
